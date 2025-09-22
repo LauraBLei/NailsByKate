@@ -1,0 +1,44 @@
+# NailsByKate Website Project Rules
+
+## Project Overview
+
+This is a Next.js website for a nail salon called "Nails by Kate". The website includes sections for pricing, booking, about, and gallery.
+
+## Tech Stack
+
+- Next.js with TypeScript
+- Tailwind CSS for styling
+- React components
+
+## Code Style Preferences
+
+- Use TypeScript for all components
+- Use functional components with arrow functions
+- Use Tailwind CSS classes for styling
+- Prefer semantic HTML elements
+- Use Norwegian text for content (PRISLISTE, BOOKING, OM MEG, GALLERY)
+
+## File Structure
+
+- Components in `src/components/`
+- Pages follow Next.js app router structure
+- Use `.tsx` extension for React components
+
+## Navigation Requirements
+
+- Navigation should link to sections using anchor links (#prisliste, #booking, etc.)
+- Include horizontal rules (hr) between navigation items
+- Mobile-responsive design
+
+## Styling Guidelines
+
+- Use Flexbox for layouts
+- Maintain clean, professional salon aesthetic
+- Ensure responsive design for mobile devices
+
+## When making changes:
+
+- Always use proper TypeScript types
+- Follow existing naming conventions
+- Test navigation functionality
+- Maintain Norwegian language for UI text
