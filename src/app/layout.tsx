@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="bg-brand-CreamPink font-primary">
-      <body className={` antialiased`}>{children}</body>
+      <body className={` antialiased flex justify-center`}>{children}</body>
     </html>
   );
 }
