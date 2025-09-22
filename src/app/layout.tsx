@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./fonts.css";
 
 export const metadata: Metadata = {
   title: "Nails By Kate",
@@ -13,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="bg-brand-CreamPink">
+    <html lang="en" className="bg-brand-CreamPink font-primary">
       <body className={` antialiased`}>{children}</body>
     </html>
   );
