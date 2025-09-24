@@ -1,6 +1,11 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
 @theme {
   --color-brand-CreamPink: #eddddd;
   --color-brand-SecondPink: #c8adac;

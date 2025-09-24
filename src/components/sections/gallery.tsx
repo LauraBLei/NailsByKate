@@ -25,7 +25,7 @@ export const Gallery = () => {
   const randomImages = getRandomImages(10); // Get 10 random images
 
   return (
-    <section className="w-full p-10 flex flex-col gap-5 mb-10">
+    <section id="gallery" className="w-full p-10 flex flex-col gap-5 mb-10">
       <Headline value="GALLERY" />
       <div>
         {/* Pattern 1: Large image left, 4 small right */}

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export const OmMegSection = () => {
   return (
-    <section className="bg-brand-SecondPink w-full p-10 flex">
+    <section id="ommeg" className="bg-brand-SecondPink w-full p-10 flex">
       <div className="flex-1 flex flex-col gap-10">
         <h2 className="text-2xl">OM MEG</h2>
         <div className="flex flex-col gap-4">

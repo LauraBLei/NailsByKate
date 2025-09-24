@@ -9,7 +9,7 @@ export const HeaderComponent = ({
   onMobileMenuClick,
 }: HeaderComponentProps) => {
   return (
-    <div className="flex justify-between items-center p-1 w-full">
+    <div className="flex   justify-between items-center p-1 w-full">
       <div>
         <Image
           src="/logo.svg"
@@ -21,7 +21,7 @@ export const HeaderComponent = ({
       </div>
 
       {/* Desktop Navigation */}
-      <nav className="hidden md:flex items-center">
+      <nav className="hidden md:flex items-center pr-5">
         <NavItem href="#prisliste" value="PRISLISTE" />
         <Divider />
         <NavItem href="#booking" value="BOOKING" />
@@ -34,7 +34,7 @@ export const HeaderComponent = ({
       {/* Mobile Menu Button */}
       <button
         onClick={onMobileMenuClick}
-        className="md:hidden p-2 bg-brand-Purple text-white rounded-full mr-5 shadow-lg"
+        className="md:hidden p-2 bg-brand-Purple cursor-pointer text-white rounded-full mr-5 shadow-lg"
         aria-label="Open menu"
       >
         <Menu size={24} />

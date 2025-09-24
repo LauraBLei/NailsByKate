@@ -13,20 +13,25 @@ export default function Home() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   return (
-    <div className="flex flex-col gap-10 items-center max-w-[1400px] w-full">
-      {/* Header - always visible, contains desktop nav and mobile button */}
-      <div className="w-full">
-        <HeaderComponent onMobileMenuClick={() => setIsSidebarOpen(true)} />
+    <div className="w-full">
+      {/* Sticky Header */}
+      <div className="sticky top-0 z-50 bg-brand-CreamPink shadow-md w-full">
+        <div className="max-w-[1400px] mx-auto">
+          <HeaderComponent onMobileMenuClick={() => setIsSidebarOpen(true)} />
+        </div>
       </div>
 
-      {/* Mobile Sidebar */}
+      {/* Sidebar */}
       <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
 
-      <HeroSection />
-      <PrislisteSection />
-      <Booking />
-      <OmMegSection />
-      <Gallery />
+      {/* Main content */}
+      <div className="flex flex-col gap-10 items-center max-w-[1400px] w-full mx-auto">
+        <HeroSection />
+        <PrislisteSection />
+        <Booking />
+        <OmMegSection />
+        <Gallery />
+      </div>
     </div>
   );
 }

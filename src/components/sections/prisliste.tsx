@@ -3,7 +3,7 @@ import { ServiceCard } from "../serviceCard";
 
 export const PrislisteSection = () => {
   return (
-    <section>
+    <section id="prisliste">
       <Headline value="PRISLISTE" />
       <div className="p-5 flex gap-5  text-base justify-evenly flex-wrap w-full">
         <ServiceCard

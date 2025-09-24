@@ -3,7 +3,7 @@ import { Headline } from "../headline";
 
 export const Booking = () => {
   return (
-    <section className="w-full font-primary">
+    <section id="booking" className="w-full font-primary">
       <Headline value="BOOKING & KONTAKT" />
       <div className="flex justify-evenly pt-5 gap-20 px-20">
         <ContactForm />

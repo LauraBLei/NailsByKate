@@ -66,7 +66,7 @@ export const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
         {/* Close button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 p-2 hover:bg-gray-100 rounded-full transition-colors"
+          className="absolute top-4 right-4 p-2 cursor-pointer hover:bg-brand-SecondPink rounded-full transition-colors"
           aria-label="Close sidebar"
         >
           <X size={24} />
