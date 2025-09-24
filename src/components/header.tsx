@@ -1,6 +1,6 @@
 export const HeaderComponent = () => {
   return (
-    <div className="flex justify-between p-5">
+    <div className="flex justify-between p-5 w-full">
       <div>Logo</div>
       <nav className="flex items-center">
         <NavItem href="#prisliste" value="PRISLISTE" />
