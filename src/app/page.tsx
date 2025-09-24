@@ -1,5 +1,6 @@
 import { HeaderComponent } from "@/components/header";
 import { Booking } from "@/components/sections/booking";
+import { Gallery } from "@/components/sections/gallery";
 import { HeroSection } from "@/components/sections/heroSection";
 import { OmMegSection } from "@/components/sections/om";
 import { PrislisteSection } from "@/components/sections/prisliste";
@@ -12,6 +13,7 @@ export default function Home() {
       <PrislisteSection />
       <Booking />
       <OmMegSection />
+      <Gallery />
     </div>
   );
 }
