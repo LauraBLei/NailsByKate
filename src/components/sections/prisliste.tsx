@@ -5,7 +5,7 @@ export const PrislisteSection = () => {
   return (
     <section>
       <Headline value="PRISLISTE" />
-      <div className="p-5 flex gap-5 justify-evenly text-base flex-wrap">
+      <div className="p-5 flex gap-5  text-base justify-evenly flex-wrap w-full">
         <ServiceCard
           src="/forlengelse.jpg"
           alt="Negle"
@@ -92,7 +92,6 @@ export const PrislisteSection = () => {
           src="/påfyll.jpg"
           alt="Negle"
           time="25 min"
-          price="400"
           title="KUN FJERNING"
         >
           <div className="flex flex-col gap-5">

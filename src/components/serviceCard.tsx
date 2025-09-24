@@ -5,7 +5,7 @@ interface ServiceCardProps {
   src: string;
   alt: string;
   time: string;
-  price: string;
+  price?: string;
   title: string;
   children: React.ReactNode;
 }
@@ -19,7 +19,7 @@ export const ServiceCard = ({
   title,
 }: ServiceCardProps) => {
   return (
-    <article className="relative bg-brand-SecondPink max-w-[380px] w-full h-[465px] rounded-md shadow-md pt-5 flex flex-col">
+    <article className="relative bg-brand-SecondPink w-[380px] h-[465px] rounded-md shadow-md pt-5 flex flex-col">
       <div className="relative w-full h-[156px] overflow-hidden  mb-5">
         <Image src={src} alt={alt} fill className="object-cover" />
       </div>
@@ -29,7 +29,7 @@ export const ServiceCard = ({
         <p className="flex gap-2">
           <Clock className="text-brand-Black" /> ca. {time}
         </p>
-        <p>{price} NOK</p>
+        {price && <p>{price} NOK</p>}
       </div>
     </article>
   );

@@ -4,7 +4,7 @@ import { PrislisteSection } from "@/components/sections/prisliste";
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-5 items-center max-w-[1400px]">
+    <div className="flex flex-col gap-5 items-center max-w-[1400px] w-full">
       <HeaderComponent />
       <HeroSection />
       <PrislisteSection />
