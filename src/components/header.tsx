@@ -1,10 +1,28 @@
-export const HeaderComponent = () => {
-  return (
-    <div className="flex justify-between p-5 w-full">
-      <div>Logo</div>
-      <nav className="flex items-center">
-        <NavItem href="#prisliste" value="PRISLISTE" />
+import { Menu } from "lucide-react";
+import Image from "next/image";
 
+interface HeaderComponentProps {
+  onMobileMenuClick?: () => void;
+}
+
+export const HeaderComponent = ({
+  onMobileMenuClick,
+}: HeaderComponentProps) => {
+  return (
+    <div className="flex justify-between items-center p-1 w-full">
+      <div>
+        <Image
+          src="/logo.svg"
+          alt="Nails By Kate Logo"
+          width={200}
+          height={40}
+          className="h-30  w-auto"
+        />
+      </div>
+
+      {/* Desktop Navigation */}
+      <nav className="hidden md:flex items-center">
+        <NavItem href="#prisliste" value="PRISLISTE" />
         <Divider />
         <NavItem href="#booking" value="BOOKING" />
         <Divider />
@@ -12,6 +30,15 @@ export const HeaderComponent = () => {
         <Divider />
         <NavItem href="#gallery" value="GALLERY" />
       </nav>
+
+      {/* Mobile Menu Button */}
+      <button
+        onClick={onMobileMenuClick}
+        className="md:hidden p-2 bg-brand-Purple text-white rounded-full mr-5 shadow-lg"
+        aria-label="Open menu"
+      >
+        <Menu size={24} />
+      </button>
     </div>
   );
 };
