@@ -1,4 +1,5 @@
 import { HeaderComponent } from "@/components/header";
+import { Booking } from "@/components/sections/booking";
 import { HeroSection } from "@/components/sections/heroSection";
 import { PrislisteSection } from "@/components/sections/prisliste";
 
@@ -8,6 +9,7 @@ export default function Home() {
       <HeaderComponent />
       <HeroSection />
       <PrislisteSection />
+      <Booking />
     </div>
   );
 }
