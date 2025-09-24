@@ -19,7 +19,7 @@ export const ServiceCard = ({
   title,
 }: ServiceCardProps) => {
   return (
-    <article className="relative bg-brand-SecondPink w-[380px] h-[465px] rounded-md shadow-md pt-5 flex flex-col">
+    <article className="relative bg-brand-SecondPink w-[330px] md:w-[380px] h-[465px] rounded-md shadow-md pt-5 flex flex-col">
       <div className="relative w-full h-[156px] overflow-hidden  mb-5">
         <Image src={src} alt={alt} fill className="object-cover" />
       </div>

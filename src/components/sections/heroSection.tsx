@@ -13,12 +13,12 @@ export const HeroSection = () => {
           priority
           unoptimized
         />
-        <div className="absolute z-20 text-white text-2xl flex flex-col gap-2 ml-30">
+        <div className="absolute z-20 text-white text-xl md:text-2xl flex flex-col gap-2 ml-5 md:ml-30">
           <p>
-            Nails <span className="text-base">By</span> Kate
+            Nails <span className="text-xs md:text-base">By</span> Kate
           </p>
           <p>Beautiful Nails, Every Time</p>
-          <a href="#booking" className="button mt-2">
+          <a href="#booking" className="button mt-2 text-base md:text-2xl">
             Book Your Appointment Today
           </a>
         </div>
