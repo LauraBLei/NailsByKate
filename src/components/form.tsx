@@ -5,7 +5,11 @@ export const ContactForm = () => {
       method="POST"
       className="flex flex-col gap-4 w-full  flex-1"
     >
-      <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+      <input
+        type="hidden"
+        name="access_key"
+        value="e55b914d-b754-4098-afc5-5442770c388a"
+      />
 
       <input
         type="text"
