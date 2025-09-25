@@ -2,24 +2,21 @@
 
 import { useEffect, useRef } from "react";
 import { X } from "lucide-react";
+import { useModal } from "@/context/modalcontext";
 
-interface SidebarProps {
-  isOpen: boolean;
-  onClose: () => void;
-}
-
-export const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
+export const Sidebar = () => {
   const sidebarRef = useRef<HTMLDivElement>(null);
+  const { sidebar, closeSidebar } = useModal();
 
   // Handle ESC key press
   useEffect(() => {
     const handleEscapeKey = (event: KeyboardEvent) => {
-      if (event.key === "Escape" && isOpen) {
-        onClose();
+      if (event.key === "Escape" && sidebar) {
+        closeSidebar();
       }
     };
 
-    if (isOpen) {
+    if (sidebar) {
       document.addEventListener("keydown", handleEscapeKey);
       // Calculate scrollbar width to prevent layout shift
       const scrollbarWidth =
@@ -37,7 +34,7 @@ export const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
       document.removeEventListener("keydown", handleEscapeKey);
       document.body.style.overflow = "unset";
     };
-  }, [isOpen, onClose]);
+  }, [sidebar, closeSidebar]);
 
   // Handle click outside
   const handleOverlayClick = (event: React.MouseEvent<HTMLDivElement>) => {
@@ -45,27 +42,27 @@ export const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
       sidebarRef.current &&
       !sidebarRef.current.contains(event.target as Node)
     ) {
-      onClose();
+      closeSidebar();
     }
   };
 
   return (
     <div
       className={`fixed inset-0 z-50 bg-brand-Black/50 transition-opacity duration-300 ${
-        isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+        sidebar ? "opacity-100" : "opacity-0 pointer-events-none"
       }`}
       onClick={handleOverlayClick}
     >
       <div
         ref={sidebarRef}
         className={`fixed right-0 top-0 h-full w-56 bg-brand-Purple text-brand-Beige shadow-lg transform transition-transform duration-300 ease-in-out ${
-          isOpen ? "translate-x-0" : "translate-x-full"
+          sidebar ? "translate-x-0" : "translate-x-full"
         }`}
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close button */}
         <button
-          onClick={onClose}
+          onClick={closeSidebar}
           className="absolute top-4 right-4 p-2 cursor-pointer hover:bg-brand-SecondPink rounded-full transition-colors"
           aria-label="Close sidebar"
         >
@@ -78,7 +75,7 @@ export const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
             <a
               href="#prisliste"
               className="text-lg hover:scale-100 scale-95 transform ease-in-out duration-300  "
-              onClick={onClose}
+              onClick={closeSidebar}
             >
               PRISLISTE
             </a>
@@ -86,7 +83,7 @@ export const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
             <a
               href="#booking"
               className="text-lg hover:scale-100 scale-95 transform ease-in-out duration-300 hover:text-brand-SecondPink "
-              onClick={onClose}
+              onClick={closeSidebar}
             >
               BOOKING
             </a>
@@ -94,7 +91,7 @@ export const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
             <a
               href="#ommeg"
               className="text-lg hover:scale-100 scale-95 transform ease-in-out duration-300 hover:text-brand-SecondPink "
-              onClick={onClose}
+              onClick={closeSidebar}
             >
               OM MEG
             </a>
@@ -103,7 +100,7 @@ export const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
             <a
               href="#gallery"
               className="text-lg hover:scale-100 scale-95 transform ease-in-out duration-300 hover:text-brand-SecondPink "
-              onClick={onClose}
+              onClick={closeSidebar}
             >
               GALLERY
             </a>

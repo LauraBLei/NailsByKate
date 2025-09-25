@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import "./fonts.css";
+import { ModalProvider } from "@/context/modalcontext";
 
 export const metadata: Metadata = {
   title: "Nails By Kate",
@@ -15,7 +16,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="bg-brand-CreamPink font-primary">
-      <body className={` antialiased flex justify-center`}>{children}</body>
+      <body className={` antialiased flex justify-center`}>
+        <ModalProvider>{children}</ModalProvider>
+      </body>
     </html>
   );
 }

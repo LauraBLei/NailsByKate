@@ -1,13 +1,9 @@
+import { useModal } from "@/context/modalcontext";
 import { Menu } from "lucide-react";
 import Image from "next/image";
 
-interface HeaderComponentProps {
-  onMobileMenuClick?: () => void;
-}
-
-export const HeaderComponent = ({
-  onMobileMenuClick,
-}: HeaderComponentProps) => {
+export const HeaderComponent = () => {
+  const { openSidebar } = useModal();
   return (
     <div className="flex   justify-between items-center p-1 w-full">
       <div>
@@ -33,7 +29,7 @@ export const HeaderComponent = ({
 
       {/* Mobile Menu Button */}
       <button
-        onClick={onMobileMenuClick}
+        onClick={openSidebar}
         className="md:hidden p-2 bg-brand-Purple cursor-pointer text-white rounded-full mr-5 shadow-lg"
         aria-label="Open menu"
       >
