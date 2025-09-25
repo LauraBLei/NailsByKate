@@ -1,7 +1,7 @@
 "use client";
 
 import { HeaderComponent } from "@/components/header";
-import { InfoModal } from "@/components/InfoModal";
+import { InfoModal } from "@/components/modals/InfoModal";
 import { Booking } from "@/components/sections/booking";
 import { Gallery } from "@/components/sections/gallery";
 import { HeroSection } from "@/components/sections/heroSection";

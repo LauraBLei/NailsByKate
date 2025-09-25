@@ -5,7 +5,7 @@ export const Booking = () => {
   return (
     <section id="booking" className="w-full font-primary">
       <Headline value="BOOKING & KONTAKT" />
-      <div className="flex justify-evenly pt-5 gap-20 px-20 flex-col md:flex-row">
+      <div className="flex justify-evenly pt-5 gap-20 px-2 md:px-20 flex-col md:flex-row">
         <ContactForm />
         <div className="flex-1 flex flex-col justify-evenly gap-5">
           <div className="text-brand-Black">
