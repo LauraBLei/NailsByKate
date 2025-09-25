@@ -1,7 +1,7 @@
 export const Headline = ({ value }: { value: string }) => {
   return (
-    <div className="w-full text-2xl">
-      <p className="py-5 px-15 ">{value}</p>
+    <div className="w-full text-lg md:text-2xl px-5 md:px-0">
+      <p className="md:py-5 pb-2 md:px-15  px-2">{value}</p>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="100%"
