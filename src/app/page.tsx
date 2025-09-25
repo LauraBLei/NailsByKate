@@ -1,6 +1,7 @@
 "use client";
 
 import { HeaderComponent } from "@/components/header";
+import { InfoModal } from "@/components/InfoModal";
 import { Booking } from "@/components/sections/booking";
 import { Gallery } from "@/components/sections/gallery";
 import { HeroSection } from "@/components/sections/heroSection";
@@ -20,7 +21,7 @@ export default function Home() {
 
       {/* Sidebar */}
       <Sidebar />
-
+      <InfoModal />
       {/* Main content */}
       <div className="flex flex-col gap-10 items-center max-w-[1400px] w-full mx-auto">
         <HeroSection />

@@ -1,7 +1,9 @@
+import { useModal } from "@/context/modalcontext";
 import { Headline } from "../headline";
 import { ServiceCard } from "../serviceCard";
 
 export const PrislisteSection = () => {
+  const { openInfoModal } = useModal();
   return (
     <section id="prisliste">
       <Headline value="PRISLISTE" />
@@ -19,7 +21,9 @@ export const PrislisteSection = () => {
               med vitaminrik neglelakk som styrker og fremmer sunne negler.
             </p>
             <div className="w-full flex justify-center">
-              <button className="button">Læs mere</button>
+              <button onClick={openInfoModal} className="button">
+                Læs mere
+              </button>
             </div>
           </div>
         </ServiceCard>
