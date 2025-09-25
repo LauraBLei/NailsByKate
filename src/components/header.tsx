@@ -12,7 +12,7 @@ export const HeaderComponent = () => {
           alt="Nails By Kate Logo"
           width={200}
           height={40}
-          className="h-30  w-auto"
+          className="h-15 md:h-30  w-auto"
         />
       </div>
 
