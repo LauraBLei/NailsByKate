@@ -6,7 +6,8 @@ interface ModalContextType {
   openSidebar: () => void;
   closeSidebar: () => void;
   imageModal: boolean;
-  openImageModal: () => void;
+  selectedImage: string | null;
+  openImageModal: (imageSrc: string) => void;
   closeImageModal: () => void;
   infoModal: boolean;
   openInfoModal: () => void;
@@ -18,13 +19,20 @@ const ModalContext = createContext<ModalContextType | undefined>(undefined);
 export const ModalProvider = ({ children }: { children: ReactNode }) => {
   const [sidebar, setSidebar] = useState<boolean>(false);
   const [imageModal, setImageModal] = useState<boolean>(false);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [infoModal, setInfoModal] = useState<boolean>(false);
 
   const openSidebar = () => setSidebar(true);
   const closeSidebar = () => setSidebar(false);
 
-  const openImageModal = () => setImageModal(true);
-  const closeImageModal = () => setImageModal(false);
+  const openImageModal = (imageSrc: string) => {
+    setSelectedImage(imageSrc);
+    setImageModal(true);
+  };
+  const closeImageModal = () => {
+    setImageModal(false);
+    setSelectedImage(null);
+  };
 
   const openInfoModal = () => setInfoModal(true);
   const closeInfoModal = () => setInfoModal(false);
@@ -36,6 +44,7 @@ export const ModalProvider = ({ children }: { children: ReactNode }) => {
         openSidebar,
         closeSidebar,
         imageModal,
+        selectedImage,
         openImageModal,
         closeImageModal,
         infoModal,
