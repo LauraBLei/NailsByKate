@@ -111,7 +111,7 @@ export const Modal = ({
 
   return (
     <div
-      className={`fixed z-40 inset-0 transition-opacity duration-300 ${
+      className={`fixed z-60 inset-0 transition-opacity duration-300 ${
         isOpen
           ? "opacity-100 pointer-events-auto"
           : "opacity-0 pointer-events-none"
@@ -119,23 +119,23 @@ export const Modal = ({
     >
       {/* Overlay */}
       <div
-        className="absolute inset-0 bg-brand-Black bg-opacity-50"
+        className="absolute inset-0 bg-brand-Black/50"
         onClick={handleOverlayClick}
       />
 
       {/* Drawer Container */}
       <div
-        className={`relative h-full flex ${slideClasses[position].container}`}
+        className={`relative h-full flex ${slideClasses[position].container} pointer-events-none`}
       >
         <div
           ref={modalRef}
-          className={`${width} h-full bg-brand-CreamPink shadow-xl transform transition-transform duration-300 ease-in-out flex flex-col ${slideClasses[position].panel} ${className}`}
+          className={`${width} h-full bg-brand-CreamPink shadow-xl transform transition-transform duration-300 ease-in-out flex flex-col ${slideClasses[position].panel} ${className} pointer-events-auto`}
         >
           {showCloseButton && (
             <div className="flex justify-end p-4">
               <button
                 onClick={onClose}
-                className="text-brand-Black hover:opacity-70 transition-opacity"
+                className="text-brand-Beige hover:opacity-70 transition-opacity"
               >
                 <X size={24} />
               </button>
