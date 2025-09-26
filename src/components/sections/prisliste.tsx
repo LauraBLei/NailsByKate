@@ -10,7 +10,7 @@ export const PrislisteSection = () => {
       <div className="p-5 flex gap-5  text-base justify-evenly flex-wrap w-full">
         <ServiceCard
           src="/gallery/4.png"
-          alt="Negle"
+          alt="Negler"
           time="45 min"
           price="250"
           title="MANIKYR + HEALTH TREATMENT"
@@ -22,17 +22,17 @@ export const PrislisteSection = () => {
             </p>
             <div className="w-full flex justify-center">
               <button onClick={openInfoModal} className="button">
-                Læs mere
+                Les mer
               </button>
             </div>
           </div>
         </ServiceCard>
         <ServiceCard
           src="/gallery/1.png"
-          alt="Negle"
-          time="1.5 time"
+          alt="Negler"
+          time="1,5 time"
           price="400"
-          title="GELLAK PÅ EGNE NEGLE"
+          title="GELLAKK PÅ EGNE NEGLER"
         >
           <div>
             <p>
@@ -43,10 +43,10 @@ export const PrislisteSection = () => {
         </ServiceCard>
         <ServiceCard
           src="/forlengelse.jpg"
-          alt="Negle"
-          time="2-3 timer"
-          price="600 - 800"
-          title="GELLAK MED FORLENGELSE"
+          alt="Negler"
+          time="2–3 timer"
+          price="600–800"
+          title="GELLAKK MED FORLENGELSE"
         >
           <div className="flex flex-col gap-2">
             <ul>
@@ -63,23 +63,23 @@ export const PrislisteSection = () => {
         </ServiceCard>
         <ServiceCard
           src="/påfyll.jpg"
-          alt="Negle"
-          time="2-3 timer"
-          price="500-700"
+          alt="Negler"
+          time="2–3 timer"
+          price="500–700"
           title="PÅFYLL"
         >
           <div>
             <p>
               Tidligere gellakk fjernes, og neglene bygges opp på nytt med
-              ferskt lag av gellakk. Anbefales hver 3.–4. uke (maks 4 uker).
+              friskt lag av gellakk. Anbefales hver 3.–4. uke (maks 4 uker).
               Inkluderer valgfri manikyrtype. Pris er avhengig av lengde og
-              mengde arbeid, med tanke på ødelagte negler som skal forlenges.{" "}
+              mengde arbeid, med tanke på ødelagte negler som skal forlenges.
             </p>
           </div>
         </ServiceCard>
         <ServiceCard
           src="/gallery/7.png"
-          alt="Negle"
+          alt="Negler"
           time="25 min"
           price="400"
           title="KUN FJERNING"
@@ -92,7 +92,12 @@ export const PrislisteSection = () => {
             </p>
           </div>
         </ServiceCard>
-        <ServiceCard src="/tilleg.jpg" alt="Negle" time="25 min" title="TILLEG">
+        <ServiceCard
+          src="/tilleg.jpg"
+          alt="Negler"
+          time="25 min"
+          title="TILLEGG"
+        >
           <div className="flex flex-col gap-5">
             <div className="flex justify-between">
               <p>French</p>
@@ -100,18 +105,18 @@ export const PrislisteSection = () => {
             </div>
             <div className="flex justify-between">
               <p>Design</p>
-              <p>150-300 NOK</p>
+              <p>150–300 NOK</p>
             </div>
             <div className="flex justify-between gap-5">
               <p>Charms:</p>
               <div className="flex flex-col gap-2 w-full">
                 <div className="flex justify-between">
                   <p>Små:</p>
-                  <p>2 NOK per stk</p>
+                  <p>2 NOK per stk.</p>
                 </div>
                 <div className="flex justify-between">
                   <p>Store:</p>
-                  <p>5 NOK per stk</p>
+                  <p>5 NOK per stk.</p>
                 </div>
               </div>
             </div>

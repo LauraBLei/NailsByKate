@@ -10,15 +10,15 @@ export const Booking = () => {
         <div className="flex-1 flex flex-col justify-evenly gap-5">
           <div className="text-brand-Black">
             <p className="text-2xl">
-              Hei! du kan kontakte meg her, eller på min instagram, for booking
-              av negle.
+              Hei! Du kan kontakte meg her, eller på Instagram, for booking av
+              negler.
             </p>
             <p className="text-base italic">
-              Jeg svarer normalt mellom 1-2 arbeidsdage.
+              Jeg svarer normalt innen 1–2 arbeidsdager.
             </p>
           </div>
           <div className="text-base flex flex-col gap-2">
-            <p>For at føre booking lettere, inkluder:</p>
+            <p>For å gjøre booking lettere, inkluder:</p>
             <ul className="list-disc list-inside px-2">
               <li>Dato og tid du ønsker.</li>
               <li>Hvilken service du ønsker.</li>
@@ -29,8 +29,8 @@ export const Booking = () => {
           <div className="flex flex-col gap-5">
             <p className="text-2xl">Åpningstider:</p>
             <p>
-              Se min Instagram for åpningstider - jeg legger ut ledige tider
-              hver uke siden timeplanen min varierer!
+              Se Instagram for åpningstider – jeg legger ut ledige tider hver
+              uke siden timeplanen min varierer!
             </p>
           </div>
         </div>

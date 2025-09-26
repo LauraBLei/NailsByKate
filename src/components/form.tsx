@@ -29,7 +29,7 @@ export const ContactForm = () => {
 
       <textarea
         name="message"
-        placeholder="Din besked..."
+        placeholder="Din beskjed..."
         required
         rows={4}
         className="inputStyle min-h-[200px]"
