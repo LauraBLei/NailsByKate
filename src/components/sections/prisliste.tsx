@@ -9,7 +9,7 @@ export const PrislisteSection = () => {
       <Headline value="PRISLISTE" />
       <div className="p-5 flex gap-5  text-base justify-evenly flex-wrap w-full">
         <ServiceCard
-          src="/forlengelse.jpg"
+          src="/gallery/4.png"
           alt="Negle"
           time="45 min"
           price="250"
@@ -28,9 +28,9 @@ export const PrislisteSection = () => {
           </div>
         </ServiceCard>
         <ServiceCard
-          src="/forlengelse.jpg"
+          src="/gallery/1.png"
           alt="Negle"
-          time="45 min"
+          time="1.5 time"
           price="400"
           title="GELLAK PÅ EGNE NEGLE"
         >
@@ -78,7 +78,7 @@ export const PrislisteSection = () => {
           </div>
         </ServiceCard>
         <ServiceCard
-          src="/påfyll.jpg"
+          src="/gallery/7.png"
           alt="Negle"
           time="25 min"
           price="400"
@@ -92,12 +92,7 @@ export const PrislisteSection = () => {
             </p>
           </div>
         </ServiceCard>
-        <ServiceCard
-          src="/påfyll.jpg"
-          alt="Negle"
-          time="25 min"
-          title="KUN FJERNING"
-        >
+        <ServiceCard src="/tilleg.jpg" alt="Negle" time="25 min" title="TILLEG">
           <div className="flex flex-col gap-5">
             <div className="flex justify-between">
               <p>French</p>
