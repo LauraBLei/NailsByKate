@@ -1,5 +1,6 @@
 "use client";
 
+import { Footer } from "@/components/footer";
 import { HeaderComponent } from "@/components/header";
 import { ImageModal } from "@/components/modals/imageModal";
 import { InfoModal } from "@/components/modals/InfoModal";
@@ -32,6 +33,7 @@ export default function Home() {
         <OmMegSection />
         <Gallery />
       </div>
+      <Footer />
     </div>
   );
 }
