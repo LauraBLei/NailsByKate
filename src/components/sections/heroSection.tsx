@@ -18,7 +18,10 @@ export const HeroSection = () => {
             Nails <span className="text-xs md:text-base">By</span> Kate
           </p>
           <p>Vakre negler, hver gang</p>
-          <a href="#booking" className="button mt-2 text-base md:text-2xl">
+          <a
+            href="#booking"
+            className="button mt-2 text-base text-center md:text-2xl"
+          >
             Book time i dag
           </a>
         </div>
