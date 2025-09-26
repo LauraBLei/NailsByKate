@@ -15,15 +15,16 @@ const InstagramIcon = ({ size = 24, className = "" }) => (
 
 export const Footer = () => {
   return (
-    <footer>
+    <footer className="sticky bottom-0 z-40 border-t-1 border-brand-Purple">
       <Desktop />
+      <Mobile />
     </footer>
   );
 };
 
 const Desktop = () => {
   return (
-    <div className="bg-brand-SecondPink px-10 items-center justify-center py-5 hidden md:flex text-sm text-brand-Black">
+    <div className="bg-brand-SecondPink  px-10 items-center justify-center py-5 hidden md:flex text-sm text-brand-Black">
       <div className="flex-1">
         <p className="text-xs">
           Designed and developed by{" "}
@@ -55,6 +56,41 @@ const Desktop = () => {
         <a href="#booking" className="bg-brand-Beige px-5 py-2 rounded-md">
           Kontakt meg
         </a>
+      </div>
+    </div>
+  );
+};
+
+const Mobile = () => {
+  return (
+    <div className="md:hidden flex flex-col bg-brand-SecondPink  items-center ">
+      <div className="flex gap-5 flex-2 items-center justify-center py-5 font-semibold ">
+        <div className="flex gap-2 items-center">
+          <Copyright />
+          <p>Nails By Kate</p>
+        </div>
+        <div className="h-6 w-px bg-brand-Purple"></div>
+        <a
+          href="https://www.instagram.com/nails_by_kate_07/"
+          target="_blank"
+          className="flex gap-2 items-center hover:text-brand-Purple transition-colors"
+        >
+          follow me:
+          <InstagramIcon size={20} />
+        </a>
+      </div>
+
+      <div className="border-t-1 w-full flex items-center justify-center py-2 bg-brand-CreamPink">
+        <p className="text-[8px]">
+          Designed and developed by{" "}
+          <a
+            href="https://leidev.net"
+            className="text-brand-Purple"
+            target="_blank"
+          >
+            Lei Dev
+          </a>
+        </p>
       </div>
     </div>
   );
