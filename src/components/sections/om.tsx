@@ -4,7 +4,7 @@ export const OmMegSection = () => {
   return (
     <section
       id="ommeg"
-      className="bg-brand-SecondPink w-full p-10 flex flex-col md:flex-row"
+      className="bg-brand-SecondPink w-full p-10 flex flex-col md:flex-row shadow-md"
     >
       <div className="flex-1 flex flex-col gap-10">
         <h2 className="text-2xl">OM MEG</h2>
