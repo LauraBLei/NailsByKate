@@ -1,10 +1,60 @@
+"use client";
+
+import { useState } from "react";
+import { Check } from "lucide-react";
+
 export const ContactForm = () => {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+      } else {
+        // Handle error - you could add error state here if needed
+        console.error("Form submission failed");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  // Success view
+  if (isSubmitted) {
+    return (
+      <div className="flex flex-col items-center justify-center gap-6 w-full flex-1 p-8 bg-green-50 rounded-lg border-2 border-green-200">
+        <div className="bg-green-100 rounded-full p-4">
+          <Check className="w-12 h-12 text-green-600" strokeWidth={3} />
+        </div>
+        <div className="text-center">
+          <h3 className="text-xl font-semibold text-green-800 mb-2">
+            Beskjed sendt!
+          </h3>
+          <p className="text-green-700">
+            Takk for henvendelsen. Jeg svarer så snart som mulig!
+          </p>
+        </div>
+      </div>
+    );
+  }
+
+  // Form view
   return (
-    <form
-      action="https://api.web3forms.com/submit"
-      method="POST"
-      className="flex flex-col gap-4 w-full  flex-1"
-    >
+    <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-full flex-1">
       <input
         type="hidden"
         name="access_key"
@@ -16,7 +66,8 @@ export const ContactForm = () => {
         name="name"
         placeholder="Ditt navn"
         required
-        className="inputStyle"
+        disabled={isLoading}
+        className="inputStyle disabled:opacity-50"
       />
 
       <input
@@ -24,7 +75,8 @@ export const ContactForm = () => {
         name="email"
         placeholder="Din e-post"
         required
-        className="inputStyle"
+        disabled={isLoading}
+        className="inputStyle disabled:opacity-50"
       />
 
       <textarea
@@ -32,7 +84,8 @@ export const ContactForm = () => {
         placeholder="Din beskjed..."
         required
         rows={4}
-        className="inputStyle min-h-[200px]"
+        disabled={isLoading}
+        className="inputStyle min-h-[200px] disabled:opacity-50"
       ></textarea>
 
       <input
@@ -41,14 +94,13 @@ export const ContactForm = () => {
         className="hidden"
         style={{ display: "none" }}
       />
-      <input
-        type="hidden"
-        name="redirect"
-        value="https://mywebsite.com/thanks.html"
-      />
 
-      <button type="submit" className="button">
-        Send
+      <button
+        type="submit"
+        disabled={isLoading}
+        className="button disabled:opacity-50 disabled:cursor-not-allowed"
+      >
+        {isLoading ? "Sender..." : "Send"}
       </button>
     </form>
   );
