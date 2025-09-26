@@ -36,15 +36,15 @@ export const ContactForm = () => {
   // Success view
   if (isSubmitted) {
     return (
-      <div className="flex flex-col items-center justify-center gap-6 w-full flex-1 p-8 bg-green-50 rounded-lg border-2 border-green-200">
-        <div className="bg-green-100 rounded-full p-4">
-          <Check className="w-12 h-12 text-green-600" strokeWidth={3} />
+      <div className="flex flex-col items-center justify-center gap-6 w-full flex-1 p-8 bg-brand-Beige rounded-lg border-2 border-brand-Purple">
+        <div className="bg-brand-SecondPink rounded-full p-4">
+          <Check className="w-12 h-12 text-brand-Purple" strokeWidth={3} />
         </div>
         <div className="text-center">
-          <h3 className="text-xl font-semibold text-green-800 mb-2">
+          <h3 className="text-xl font-semibold text-brand-Purple mb-2">
             Beskjed sendt!
           </h3>
-          <p className="text-green-700">
+          <p className="text-brand-Purple">
             Takk for henvendelsen. Jeg svarer så snart som mulig!
           </p>
         </div>
