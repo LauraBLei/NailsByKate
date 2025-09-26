@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export const HeroSection = () => {
   return (
-    <div className="w-full relative h-auto shadow-lg">
+    <section id="hero" className="w-full relative h-auto shadow-lg">
       <div className="relative w-full h-[370px] overflow-hidden flex items-center">
         <Image
           src={"/hero.png"}
@@ -27,6 +27,6 @@ export const HeroSection = () => {
         </div>
         <div className="absolute inset-0 bg-black/30"></div>
       </div>
-    </div>
+    </section>
   );
 };

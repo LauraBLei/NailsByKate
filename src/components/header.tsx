@@ -7,13 +7,15 @@ export const HeaderComponent = () => {
   return (
     <div className="flex   justify-between items-center p-1 w-full">
       <div>
-        <Image
-          src="/logo.svg"
-          alt="Nails By Kate Logo"
-          width={200}
-          height={40}
-          className="h-15 md:h-20  w-auto"
-        />
+        <a href="#hero" className="block">
+          <Image
+            src="/logo.svg"
+            alt="Nails By Kate Logo"
+            width={200}
+            height={40}
+            className="h-15 md:h-20  w-auto hover:opacity-80 transition-opacity"
+          />
+        </a>
       </div>
 
       {/* Desktop Navigation */}
