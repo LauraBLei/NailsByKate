@@ -9,18 +9,19 @@ export const PrislisteSection = () => {
       <Headline value="PRISLISTE" />
       <div className="p-5 flex gap-5  text-base justify-evenly flex-wrap w-full">
         <ServiceCard
-          src="/gallery/4.png"
+          src="/manikyr.jpg"
           alt="Negler"
           time="45 min"
           price="250"
           title="MANIKYR + HEALTH TREATMENT"
         >
-          <div>
+          <div className="flex flex-col gap-5">
             <p>
               En valgfri manikyr fra en av de 7 ulike typene, inkludert et lag
-              med vitaminrik neglelakk som styrker og fremmer sunne negler.
+              med vitaminrik neglelakk som styrker og fremmer sunne negler. For
+              både menn og kvinner.
             </p>
-            <div className="w-full flex justify-center">
+            <div className="w-full flex justify-center ">
               <button onClick={openInfoModal} className="button">
                 Les mer
               </button>
@@ -28,7 +29,7 @@ export const PrislisteSection = () => {
           </div>
         </ServiceCard>
         <ServiceCard
-          src="/gallery/1.png"
+          src="/gellakpåegnenegle.png"
           alt="Negler"
           time="1,5 time"
           price="400"
