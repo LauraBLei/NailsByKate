@@ -26,6 +26,7 @@ export const ModalProvider = ({ children }: { children: ReactNode }) => {
   const closeSidebar = () => setSidebar(false);
 
   const openImageModal = (imageSrc: string) => {
+    console.log("🖼️ Opening image modal with:", imageSrc);
     setSelectedImage(imageSrc);
     setImageModal(true);
   };
